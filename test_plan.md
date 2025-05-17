@@ -1,0 +1,13 @@
+**Test Cases**
+Table 1. Summary of test cases for set_pulse_sequence
+| File Name          	| Function Name   	| Description                                                        	| Expected Error Message(s) (if any)                                                                             	| Pass/Fail 	|
+|--------------------	|-----------------	|--------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------	|-----------	|
+| pulse_sequence.in  	| positive_test_1 	| Positive cases correctly set the pulse sequence for valid emitters 	| None                                                                                                           	| Pass      	|
+| positive_case_2.in 	| positive_test_2 	| Positive cases correctly set the pulse sequence for valid emitters 	| None                                                                                                           	| Pass      	|
+| negative_case_1.in 	| negative_test_1 	| Negative test with an invalid emitter symbol                       	| Raising AssertionError: Emitter X is not in the circuit emitters                                               	| Pass      	|
+| negative_case_2.in 	| negative_test_2 	| Negative test with an empty file                                   	| Raising AssertionError: The pulse sequence can't be set when the file is empty                                 	| Pass      	|
+| negative_case_3.in 	| negative_test_3 	| Negative test for too many lines in the file                       	| Raising AssertionError: The pulse sequence is correctly set even though it has too many lines in the file.     	| Pass      	|
+| negative_case_4.in 	| negative_test_4 	| Negative test case for insufficient lines in the file              	| Raising AssertionError: The pulse sequence is correctly set even though it has insufficient lines in the file. 	| Pass      	|
+| edge_case_1.in     	| edge_test_1     	| Edge case with maximum valid input size                            	| None                                                                                                           	| Pass      	|
+| edge_case_2.in     	| edge_test_2     	| Edge case with minimum valid input size                            	| Raising AssertionError: The frequency can't be 0                                                               	| Pass      	|
+| edge_case_3.in     	| edge_test_3     	| Edge case with mixed valid and invalid input                       	| Raising AssertionError: The frequency can't be negative                                                        	| Pass      	|
